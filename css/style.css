@@ -4,9 +4,14 @@ header {
   text-align: center;
   padding: 20px 0 10px 0;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
-header a:first-child {
-  display: none;
+header .return {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 5%;
+  top: 40%;
 }
 
 * {
@@ -25,6 +30,14 @@ ul {
 a {
   text-decoration: none;
   color: black;
+}
+
+.heart {
+  color: #ffffff;
+  -webkit-text-stroke: 2px black;
+  -webkit-text-fill-color: #ffffff;
+  height: 32px;
+  width: 32px;
 }
 
 .place {
@@ -165,14 +178,74 @@ a {
   font-weight: 900;
 }
 #restaurants article i {
-  color: #ffffff;
-  -webkit-text-stroke: 2px black;
-  -webkit-text-fill-color: #ffffff;
   position: absolute;
-  height: 32px;
-  width: 32px;
   bottom: 30px;
   right: 30px;
+}
+
+.img-francaise {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.menu-francaise {
+  background-color: #f6f6f6;
+  border-radius: 40px;
+  margin-top: -50px;
+  padding: 40px 20px 100px 20px;
+}
+.menu-francaise .title-francaise {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.menu-francaise .title-francaise h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 40px;
+  font-weight: 400;
+}
+.menu-francaise .title-francaise .heart {
+  margin-right: 20px;
+}
+.menu-francaise .dish-francaise h6 {
+  color: #4b4b4b;
+  position: relative;
+  margin: 40px 0;
+  font-size: 23px;
+}
+.menu-francaise .dish-francaise h6:after {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 60px;
+  background-color: #99e2d0;
+  bottom: -15px;
+  left: 0;
+}
+.menu-francaise .dish-francaise article {
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px 15px;
+  margin-bottom: 20px;
+}
+.menu-francaise .dish-francaise article .dish-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.menu-francaise .dish-francaise article .dish-wrapper .price {
+  font-size: 18px;
+  font-weight: 900;
+  color: #4b4b4b;
+}
+.menu-francaise .dish-francaise .btn-purple {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 50px auto 0 auto;
+  display: block;
 }
 
 h1,
@@ -194,6 +267,11 @@ h4 {
 h5 {
   font-weight: 400;
   font-size: 20px;
+}
+
+h6 {
+  font-weight: 400;
+  font-size: 23px;
 }
 
 .font-medium {

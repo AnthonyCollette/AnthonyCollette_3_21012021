@@ -1,20 +1,20 @@
 .place {
   text-align: center;
-  padding: 15px 0 20px 0;
+  padding: 15px 0;
   background-color: #eaeaea;
-  margin-top: 5px;
 
   .town {
     font-weight: $bold;
     color: $grey;
     position: relative;
+    font-size: 15px;
 
     i {
       position: absolute;
       height: 20px;
       width: 20px;
       left: -30px;
-      top: 0px;
+      top: 1px;
       color: $dark-grey;
     }
   }
@@ -22,7 +22,7 @@
 
 .search {
   background-color: $light-grey;
-  padding: 45px 0 55px 0;
+  padding: 35px 0 55px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,23 +35,24 @@
 
   h3 {
     text-align: center;
-    margin: 20px 0 35px 0;
+    margin: 15px 0 35px 0;
     max-width: 90%;
   }
 }
 
 .method {
-  padding: 50px 20px 60px 20px;
+  padding: 50px 20px 40px 20px;
   h2 {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
   .method-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 100%;
     article {
       display: flex;
-      max-width: 95%;
+      max-width: 100%;
       justify-content: flex-start;
       align-items: center;
       position: relative;
@@ -78,7 +79,7 @@
         color: $grey;
       }
       .method-text {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: $bold;
       }
     }
@@ -86,7 +87,7 @@
 }
 
 #restaurants {
-  padding: 60px 20px 55px 20px;
+  padding: 50px 20px 45px 20px;
   background-color: $light-grey;
   h2 {
     margin-bottom: 20px;
@@ -106,7 +107,7 @@
     position: relative;
     min-width: 100%;
     a {
-      height: 290px;
+      height: 250px;
       display: flex;
       flex-direction: column;
     }
@@ -124,7 +125,7 @@
       line-height: 30px;
     }
     img {
-      height: calc(100% - 90px);
+      height: calc(100% - 75px);
       object-fit: cover;
     }
     .restaurant-wrapper {
@@ -133,74 +134,90 @@
       align-items: center;
       padding: 15px 40px 0 15px;
       h4 {
-        margin-bottom: 5px;
         font-weight: $black;
+        margin-bottom: 2px;
       }
     }
     i {
       position: absolute;
-      bottom: 30px;
-      right: 30px;
+      bottom: 12px;
+      right: 15px;
     }
   }
 }
 
-.img-francaise {
+.img-menu {
   width: 100%;
   position: relative;
   z-index: -1;
 }
+.big-img {
+  object-position: 0 -100px;
+}
 
-.menu-francaise {
+.menu {
   background-color: $light-grey;
-  border-radius: 40px;
+  border-radius: 40px 40px 0 0;
   margin-top: -50px;
-  padding: 40px 20px 100px 20px;
-  .title-francaise {
+  padding: 30px 20px 100px 20px;
+  .title {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     h1 {
       font-family: $primary-font;
-      font-size: 40px;
+      font-size: 28px;
       font-weight: $regular;
     }
     .heart {
-      margin-right: 20px;
+      margin-right: 10px;
     }
   }
-  .dish-francaise {
+  .dish {
     h6 {
       color: $grey;
       position: relative;
-      margin: 40px 0;
-      font-size: 23px;
+      margin: 30px 0 30px 0;
+      font-size: 16px;
       &:after {
         position: absolute;
         content: "";
-        height: 5px;
-        width: 60px;
+        height: 3px;
+        width: 40px;
         background-color: $tertiary-color;
-        bottom: -15px;
+        bottom: -8px;
         left: 0;
       }
+    }
+    .results-menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
     }
     article {
       border-radius: 20px;
       background-color: $white;
       box-shadow: $btn-shadow;
-      padding: 20px 15px;
+      padding: 15px 25px 10px 15px;
       margin-bottom: 20px;
+      min-width: 300px;
       .dish-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: 5px;
         .price {
-          font-size: 18px;
+          font-size: 16px;
           font-weight: $black;
           color: $grey;
         }
+      }
+      h4 {
+        font-size: 17px;
+      }
+      h5 {
+        font-size: 14px;
       }
     }
     .btn-purple {
@@ -210,4 +227,8 @@
       display: block;
     }
   }
+}
+
+.menu-big-image {
+  margin-top: -260px;
 }

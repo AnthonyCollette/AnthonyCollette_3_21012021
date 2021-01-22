@@ -1,0 +1,9 @@
+// Media queries
+
+@mixin breakpoint-up($breakpoint) {
+  @if $breakpoint == "lg" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}

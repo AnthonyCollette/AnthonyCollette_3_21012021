@@ -1,4 +1,238 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+header {
+  text-align: center;
+  padding: 20px 0 10px 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+header a:first-child {
+  display: none;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.place {
+  text-align: center;
+  padding: 15px 0 20px 0;
+  background-color: #eaeaea;
+  margin-top: 5px;
+}
+.place .town {
+  font-weight: 700;
+  color: #4b4b4b;
+  position: relative;
+}
+.place .town i {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: -30px;
+  top: 0px;
+  color: #353535;
+}
+
+.search {
+  background-color: #f6f6f6;
+  padding: 45px 0 55px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search h1 {
+  max-width: 80%;
+  text-align: center;
+}
+.search h3 {
+  text-align: center;
+  margin: 20px 0 35px 0;
+  max-width: 90%;
+}
+
+.method {
+  padding: 50px 20px 60px 20px;
+}
+.method h2 {
+  margin-bottom: 40px;
+}
+.method .method-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.method .method-wrapper article {
+  display: flex;
+  max-width: 95%;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  padding: 30px 0 25px 35px;
+  background-color: #f6f6f6;
+  min-width: 80%;
+  border-radius: 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.method .method-wrapper article .method-number {
+  text-align: center;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  left: -12px;
+  top: 30px;
+  border-radius: 50%;
+  background-color: #9356dc;
+  color: #ffffff;
+  line-height: 25px;
+}
+.method .method-wrapper article i {
+  margin-right: 28px;
+  color: #4b4b4b;
+}
+.method .method-wrapper article .method-text {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#restaurants {
+  padding: 60px 20px 55px 20px;
+  background-color: #f6f6f6;
+}
+#restaurants h2 {
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+#restaurants .restaurants-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#restaurants article {
+  border-radius: 20px;
+  background-color: #ffffff;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-width: 100%;
+}
+#restaurants article a {
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+}
+#restaurants article .tag-new {
+  position: absolute;
+  height: 30px;
+  min-width: 25%;
+  top: 20px;
+  right: 20px;
+  color: #269e80;
+  background-color: #99e2d0;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 30px;
+}
+#restaurants article img {
+  height: calc(100% - 90px);
+  object-fit: cover;
+}
+#restaurants article .restaurant-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px 0 15px;
+}
+#restaurants article .restaurant-wrapper h4 {
+  margin-bottom: 5px;
+  font-weight: 900;
+}
+#restaurants article i {
+  color: #ffffff;
+  -webkit-text-stroke: 2px black;
+  -webkit-text-fill-color: #ffffff;
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  bottom: 30px;
+  right: 30px;
+}
+
+h1,
+h2 {
+  font-weight: 900;
+  font-size: 30px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 22px;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.font-medium {
+  font-size: 18px;
+}
+
+.btn-purple {
+  border-radius: 40px;
+  padding: 20px 25px;
+  background: linear-gradient(to top left, #a45cdb, #f075da);
+  color: #ffffff;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  border: none;
+}
+
+footer {
+  background-color: #353535;
+  color: #ffffff;
+  padding: 20px 0 30px 20px;
+  font-size: 18px;
+}
+footer li {
+  margin-bottom: 10px;
+}
+footer .name {
+  font-family: "Shrikhand", cursive;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+footer .footer-icon {
+  display: flex;
+  align-items: center;
+}
+footer .footer-icon span {
+  margin-left: 10px;
+}
+footer .footer-icon .footer-partner {
+  margin-left: 6px;
+}
 
 /*# sourceMappingURL=style.css.map */

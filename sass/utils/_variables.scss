@@ -3,6 +3,12 @@
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
+$light-grey: #f6f6f6;
+$grey: #4b4b4b;
+$dark-grey: #353535;
+$white: #ffffff;
+$green: #99e2d0;
+$dark-green: #269e80;
 
 // FONTS
 
@@ -10,4 +16,14 @@ $primary-font: "Shrikhand", cursive;
 $secondary-font: "Roboto", sans-serif;
 $light: 300;
 $regular: 400;
-$bold: 900;
+$medium: 500;
+$bold: 700;
+$black: 900;
+
+// SHADOWS
+
+$btn-shadow: 0 5px 5px
+  rgba(
+    $color: #000000,
+    $alpha: 0.1,
+  );

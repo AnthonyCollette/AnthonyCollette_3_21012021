@@ -240,6 +240,7 @@
       }
       .heart {
         margin-right: 10px;
+        padding-left: 20px;
       }
     }
     .dish {
@@ -261,8 +262,11 @@
       .results-menu {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: center;
         margin-bottom: 30px;
+        @include breakpoint-up(xl) {
+          justify-content: flex-start;
+        }
         > a {
           border-radius: 20px;
           background-color: $white;

@@ -298,6 +298,7 @@ a {
 }
 .menu .menu-wrapper .title .heart {
   margin-right: 10px;
+  padding-left: 20px;
 }
 .menu .menu-wrapper .dish h6 {
   color: #4b4b4b;
@@ -317,8 +318,13 @@ a {
 .menu .menu-wrapper .dish .results-menu {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 30px;
+}
+@media (min-width: 1200px) {
+  .menu .menu-wrapper .dish .results-menu {
+    justify-content: flex-start;
+  }
 }
 .menu .menu-wrapper .dish .results-menu > a {
   border-radius: 20px;

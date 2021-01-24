@@ -8,3 +8,30 @@
   font-weight: $regular;
   border: none;
 }
+
+.heart {
+  background: transparent;
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-size: 24px;
+  //&:active {
+  //  animation-name: heart;
+  //  animation-duration: 0.5s;
+  //}
+  //  &:active {
+  //    background: linear-gradient(
+  //      to left bottom,
+  //      $primary-color,
+  //      $secondary-color
+  //    );
+  //    -webkit-background-clip: text;
+  //    -webkit-text-stroke: 0px transparent;
+  //  }
+}
+
+.like-btn {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}

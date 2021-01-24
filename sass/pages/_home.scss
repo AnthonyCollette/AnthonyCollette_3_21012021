@@ -106,8 +106,8 @@
     max-width: 1600px;
     margin: 0 auto;
     @include breakpoint-up(xl) {
-      padding-top: 8vh;
-      padding-bottom: 8vh;
+      padding-top: 10vh;
+      padding-bottom: 10vh;
     }
     h2 {
       margin: 0 0 20px 0;
@@ -193,7 +193,7 @@
 }
 
 .palette {
-  background-image: url("/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("../../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-position-y: 70%;
 }
 
@@ -261,7 +261,7 @@
       .results-menu {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         margin-bottom: 30px;
         > a {
           border-radius: 20px;

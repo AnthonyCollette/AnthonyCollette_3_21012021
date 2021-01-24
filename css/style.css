@@ -157,8 +157,8 @@ a {
 }
 @media (min-width: 1200px) {
   .restaurants-bg #restaurants {
-    padding-top: 8vh;
-    padding-bottom: 8vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
   }
 }
 .restaurants-bg #restaurants h2 {
@@ -248,7 +248,7 @@ a {
 }
 
 .palette {
-  background-image: url("/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("../../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-position-y: 70%;
 }
 
@@ -317,7 +317,7 @@ a {
 .menu .menu-wrapper .dish .results-menu {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 30px;
 }
 .menu .menu-wrapper .dish .results-menu > a {

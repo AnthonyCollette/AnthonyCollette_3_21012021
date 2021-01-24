@@ -178,3 +178,26 @@
     opacity: 100%;
   }
 }
+
+@keyframes heart-bg {
+  from {
+    background-color: transparent;
+    -webkit-text-stroke: 1px black;
+  }
+
+  to {
+    background-color: $primary-color;
+    -webkit-text-stroke: 1px $primary-color;
+  }
+}
+
+@keyframes heart-bg-off {
+  from {
+    background-color: $primary-color;
+    -webkit-text-stroke: 1px $primary-color;
+  }
+  to {
+    background-color: transparent;
+    -webkit-text-stroke: 1px black;
+  }
+}

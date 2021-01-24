@@ -127,6 +127,18 @@
   animation-delay: 1.3s;
 }
 
+.delay44 {
+  animation-delay: 4.4s;
+}
+
+.delay48 {
+  animation-delay: 4.8s;
+}
+
+.delay52 {
+  animation-delay: 5.2s;
+}
+
 .dish-bg-animation, .menu .menu-wrapper .dish .results-menu > a:hover .check-mark, .menu .menu-wrapper .dish .results-menu > a:focus .check-mark {
   transform: translateX(-69px);
   transition-duration: 1s;

@@ -170,34 +170,49 @@
   }
 }
 
-@keyframes opacity {
+@keyframes heart-bg {
   from {
     opacity: 0%;
   }
+
   to {
     opacity: 100%;
   }
 }
 
-@keyframes heart-bg {
+@keyframes heart-bg-off {
   from {
-    background-color: transparent;
-    -webkit-text-stroke: 1px black;
+    opacity: 100%;
   }
-
   to {
-    background-color: $primary-color;
-    -webkit-text-stroke: 1px $primary-color;
+    opacity: 0%;
   }
 }
 
-@keyframes heart-bg-off {
+@keyframes heart-stroke-off {
   from {
-    background-color: $primary-color;
-    -webkit-text-stroke: 1px $primary-color;
+    -webkit-text-stroke: 1px black;
   }
   to {
-    background-color: transparent;
+    -webkit-text-stroke: 1px transparent;
+  }
+}
+
+@keyframes heart-stroke-on {
+  from {
+    -webkit-text-stroke: 1px transparent;
+  }
+  to {
     -webkit-text-stroke: 1px black;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
   }
 }

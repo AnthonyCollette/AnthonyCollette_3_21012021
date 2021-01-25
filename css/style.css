@@ -197,6 +197,57 @@
     opacity: 100%;
   }
 }
+@keyframes btn {
+  from {
+    background: linear-gradient(to top left, #9356dc, #ff79da);
+    color: #ffffff;
+  }
+  to {
+    background: #f5edff;
+    color: #9356dc;
+  }
+}
+@keyframes btn-off {
+  from {
+    background: #f5edff;
+    color: #9356dc;
+  }
+  to {
+    background: linear-gradient(to top left, #9356dc, #ff79da);
+    color: #ffffff;
+  }
+}
+@keyframes drop-shadow {
+  from {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes drop-shadow-off {
+  from {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  to {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+.drop-shadow, .restaurants-bg #restaurants .restaurants-results article:hover, .restaurants-bg #restaurants .restaurants-results article:active,
+.drop-shadow-off,
+.restaurants-bg #restaurants .restaurants-results article {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+.drop-shadow, .restaurants-bg #restaurants .restaurants-results article:hover, .restaurants-bg #restaurants .restaurants-results article:active {
+  animation-name: drop-shadow;
+}
+
+.drop-shadow-off, .restaurants-bg #restaurants .restaurants-results article {
+  animation-name: drop-shadow-off;
+}
+
 header {
   text-align: center;
   padding: 10px 0 10px 0;
@@ -529,7 +580,7 @@ a {
   padding: 30px 20px 100px 20px;
 }
 .menu .menu-wrapper {
-  max-width: 1100px;
+  max-width: 980px;
   margin: 0 auto;
 }
 .menu .menu-wrapper .title {
@@ -713,12 +764,19 @@ h6 {
 .btn-purple {
   border-radius: 40px;
   padding: 15px 25px;
-  background: linear-gradient(to top left, #a45cdb, #f075da);
+  background: linear-gradient(to top left, #9356dc, #ff79da);
   color: #ffffff;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   font-size: 16px;
   font-weight: 400;
-  border: none;
+  animation-name: btn-off;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+.btn-purple:hover {
+  animation-name: btn;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
 }
 
 .like-btn {
@@ -747,7 +805,7 @@ h6 {
   padding-left: 1px;
 }
 .like-btn a .heart .heart-fill {
-  background: linear-gradient(to bottom left, #a45cdb, #f075da);
+  background: linear-gradient(to bottom left, #9356dc, #ff79da);
   font-size: 24px;
   -webkit-text-stroke: 1px transparent;
   -webkit-background-clip: text;
@@ -762,7 +820,7 @@ h6 {
   padding-left: 1px;
 }
 .like-btn a .heart .heart-fill-menu {
-  background: linear-gradient(to bottom left, #a45cdb, #f075da);
+  background: linear-gradient(to bottom left, #9356dc, #ff79da);
   font-size: 24px;
   -webkit-text-stroke: 1px transparent;
   -webkit-background-clip: text;

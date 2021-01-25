@@ -105,7 +105,6 @@
         article {
           background-color: $light-pink;
           transition-duration: 0.4s;
-
           i {
             color: $primary-color;
             transition-duration: 0.4s;
@@ -187,10 +186,15 @@
         background-color: $white;
         overflow: hidden;
         box-shadow: $btn-shadow;
+        @extend .drop-shadow-off;
         position: relative;
         width: 100%;
         max-width: 335px;
         margin: 0 0 20px 0;
+        &:hover,
+        &:active {
+          @extend .drop-shadow;
+        }
         @include breakpoint-up(sm) {
           margin: 0 10px 20px 10px;
         }
@@ -282,7 +286,7 @@
   padding: 30px 20px 100px 20px;
 
   .menu-wrapper {
-    max-width: 1100px;
+    max-width: 980px;
     margin: 0 auto;
 
     .title {

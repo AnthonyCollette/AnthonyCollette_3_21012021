@@ -216,3 +216,59 @@
     opacity: 100%;
   }
 }
+
+@keyframes btn {
+  from {
+    background: linear-gradient(to top left, $primary-color, $secondary-color);
+    color: $white;
+  }
+
+  to {
+    background: $light-pink;
+    color: $primary-color;
+  }
+}
+
+@keyframes btn-off {
+  from {
+    background: $light-pink;
+    color: $primary-color;
+  }
+
+  to {
+    background: linear-gradient(to top left, $primary-color, $secondary-color);
+    color: $white;
+  }
+}
+
+@keyframes drop-shadow {
+  from {
+    box-shadow: $btn-shadow;
+  }
+  to {
+    box-shadow: $btn-shadow-hover;
+  }
+}
+
+@keyframes drop-shadow-off {
+  from {
+    box-shadow: $btn-shadow-hover;
+  }
+  to {
+    box-shadow: $btn-shadow;
+  }
+}
+
+.drop-shadow,
+.drop-shadow-off {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+.drop-shadow {
+  animation-name: drop-shadow;
+}
+
+.drop-shadow-off {
+  animation-name: drop-shadow-off;
+}

@@ -1,12 +1,19 @@
 .btn-purple {
   border-radius: 40px;
   padding: 15px 25px;
-  background: linear-gradient(to top left, #a45cdb, #f075da);
+  background: linear-gradient(to top left, $primary-color, $secondary-color);
   color: $white;
   box-shadow: $btn-shadow;
   font-size: 16px;
   font-weight: $regular;
-  border: none;
+  animation-name: btn-off;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  &:hover {
+    animation-name: btn;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+  }
 }
 
 .like-btn {
@@ -38,7 +45,11 @@
       position: relative;
       padding-left: 1px;
       .heart-fill {
-        background: linear-gradient(to bottom left, #a45cdb, #f075da);
+        background: linear-gradient(
+          to bottom left,
+          $primary-color,
+          $secondary-color
+        );
         font-size: 24px;
         -webkit-text-stroke: 1px transparent;
         -webkit-background-clip: text;
@@ -53,7 +64,11 @@
         padding-left: 1px;
       }
       .heart-fill-menu {
-        background: linear-gradient(to bottom left, #a45cdb, #f075da);
+        background: linear-gradient(
+          to bottom left,
+          $primary-color,
+          $secondary-color
+        );
         font-size: 24px;
         -webkit-text-stroke: 1px transparent;
         -webkit-background-clip: text;

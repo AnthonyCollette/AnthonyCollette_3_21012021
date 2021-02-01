@@ -71,7 +71,7 @@
     text-align: center;
   }
 
-  h3 {
+  p {
     text-align: center;
     margin: 15px 0 35px 0;
     max-width: 90%;
@@ -107,7 +107,6 @@
           transition-duration: 0.4s;
           i {
             color: $primary-color;
-            transition-duration: 0.4s;
           }
         }
       }
@@ -186,14 +185,14 @@
         background-color: $white;
         overflow: hidden;
         box-shadow: $btn-shadow;
-        @extend .drop-shadow-off;
         position: relative;
         width: 100%;
         max-width: 335px;
         margin: 0 0 20px 0;
+        transition-duration: 0.2s;
         &:hover,
         &:active {
-          @extend .drop-shadow;
+          box-shadow: $btn-shadow-hover;
         }
         @include breakpoint-up(sm) {
           margin: 0 10px 20px 10px;
@@ -230,217 +229,10 @@
           align-items: center;
           padding: 15px 40px 0 15px;
           h4 {
-            font-weight: $black;
             margin-bottom: 2px;
           }
         }
       }
     }
   }
-}
-
-.img-menu {
-  width: 100%;
-  height: 250px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  @include breakpoint-up(lg) {
-    height: 400px;
-  }
-  @include breakpoint-up(xl) {
-    height: 600px;
-  }
-}
-
-.palette {
-  background-image: url("../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-  background-position-y: 70%;
-}
-
-.note-enchantee {
-  background-image: url("../images/stil-u2Lp8tXIcjw-unsplash.jpg");
-  background-position-y: 50%;
-  @include breakpoint-up(sm) {
-    background-position-y: 60%;
-  }
-}
-
-.a-la-francaise {
-  background-image: url("../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-  background-position-y: 80%;
-}
-
-.delice {
-  background-image: url("../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-  background-position-y: 80%;
-}
-
-.big-img {
-  object-position: 0 -100px;
-}
-
-.menu {
-  background-color: $light-grey;
-  border-radius: 40px 40px 0 0;
-  margin-top: -10%;
-  padding: 30px 20px 100px 20px;
-
-  .menu-wrapper {
-    max-width: 980px;
-    margin: 0 auto;
-
-    .title {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      h1 {
-        font-family: $primary-font;
-        font-size: 28px;
-        font-weight: $regular;
-        max-width: 85%;
-      }
-      i {
-        margin: 0 10px 0 0;
-      }
-    }
-    .dish {
-      h6 {
-        color: $grey;
-        position: relative;
-        margin: 30px 0 30px 0;
-        font-size: 16px;
-        &:after {
-          position: absolute;
-          content: "";
-          height: 3px;
-          width: 40px;
-          background-color: $tertiary-color;
-          bottom: -8px;
-          left: 0;
-        }
-      }
-      .results-menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-bottom: 30px;
-        @include breakpoint-up(xl) {
-          justify-content: flex-start;
-        }
-        > a {
-          border-radius: 20px;
-          background-color: $white;
-          box-shadow: $btn-shadow;
-          margin-bottom: 20px;
-          width: 85%;
-          max-width: 304px;
-          display: flex;
-          justify-content: space-between;
-          overflow: hidden;
-          position: relative;
-          &:hover,
-          &:focus {
-            .check-mark {
-              @extend .dish-bg-animation;
-              .circle {
-                animation-name: mark-animation;
-                animation-duration: 1s;
-                animation-fill-mode: forwards;
-              }
-            }
-            article {
-              width: 60%;
-              transition-duration: 1s;
-            }
-          }
-          @extend .from-down;
-          @include breakpoint-up(sm) {
-            margin: 10px;
-          }
-          .check-mark {
-            @extend .dish-bg-original;
-            position: absolute;
-            width: 69px;
-            height: 69px;
-            right: -69px;
-            top: 0;
-            background-color: $tertiary-color;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .circle {
-              height: 40%;
-              width: 40%;
-              background-color: $white;
-              border-radius: 50%;
-              position: relative;
-              &::before {
-                content: "";
-                position: absolute;
-                height: 4px;
-                width: 8px;
-                background-color: $tertiary-color;
-                top: 50%;
-                left: 22%;
-                border-radius: 2px;
-                transform: rotate(45deg);
-              }
-              &::after {
-                content: "";
-                position: absolute;
-                height: 4px;
-                width: 15px;
-                background-color: $tertiary-color;
-                top: 45%;
-                right: 13%;
-                border-radius: 2px;
-                transform: rotate(-45deg);
-              }
-            }
-          }
-          article {
-            padding: 15px 25px 10px 15px;
-            width: 87%;
-            transition-duration: 1s;
-            .dish-wrapper {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              margin-top: 5px;
-              .price {
-                font-size: 16px;
-                font-weight: $black;
-                color: $grey;
-              }
-            }
-          }
-          h4 {
-            font-size: 17px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            max-width: 85%;
-          }
-          h5 {
-            font-size: 14px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            max-width: 83%;
-          }
-        }
-      }
-      .btn-purple {
-        padding-left: 40px;
-        padding-right: 40px;
-        margin: 50px auto 0 auto;
-        display: block;
-        width: fit-content;
-      }
-    }
-  }
-}
-
-.menu-big-image {
-  margin-top: -260px;
 }

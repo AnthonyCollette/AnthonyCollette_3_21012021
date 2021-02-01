@@ -16,17 +16,6 @@
     transform: translateY(-100vh);
   }
 }
-@keyframes heart {
-  0% {
-    background: transparent;
-    -webkit-text-stroke: 1px black;
-  }
-  100% {
-    background: linear-gradient(to left bottom, #9356dc, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 0px transparent;
-  }
-}
 @keyframes from-down {
   from {
     transform: translateY(20px);
@@ -57,22 +46,6 @@
   }
   100% {
     color: #4b4b4b;
-  }
-}
-@keyframes method-clicked-bg {
-  0% {
-    background-color: #f6f6f6;
-  }
-  100% {
-    background-color: #f5edff;
-  }
-}
-@keyframes method-clicked {
-  0% {
-    color: #4b4b4b;
-  }
-  100% {
-    color: #9356dc;
   }
 }
 .delay1 {
@@ -139,54 +112,12 @@
   animation-delay: 5.2s;
 }
 
-.dish-bg-animation, .menu .menu-wrapper .dish .results-menu > a:hover .check-mark, .menu .menu-wrapper .dish .results-menu > a:focus .check-mark {
-  transform: translateX(-69px);
-  transition-duration: 1s;
-}
-
-.dish-bg-original, .menu .menu-wrapper .dish .results-menu > a .check-mark {
-  transform: translateX(69px);
-  transition-duration: 1.5s;
-}
-
 @keyframes mark-animation {
   0% {
     transform: rotate(0);
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@keyframes heart-bg {
-  from {
-    opacity: 0%;
-  }
-  to {
-    opacity: 100%;
-  }
-}
-@keyframes heart-bg-off {
-  from {
-    opacity: 100%;
-  }
-  to {
-    opacity: 0%;
-  }
-}
-@keyframes heart-stroke-off {
-  from {
-    -webkit-text-stroke: 1px black;
-  }
-  to {
-    -webkit-text-stroke: 1px transparent;
-  }
-}
-@keyframes heart-stroke-on {
-  from {
-    -webkit-text-stroke: 1px transparent;
-  }
-  to {
-    -webkit-text-stroke: 1px black;
   }
 }
 @keyframes opacity {
@@ -197,55 +128,11 @@
     opacity: 100%;
   }
 }
-@keyframes btn {
-  from {
-    background: linear-gradient(to top left, #9356dc, #ff79da);
-    color: #ffffff;
-  }
-  to {
-    background: #f5edff;
-    color: #9356dc;
-  }
-}
-@keyframes btn-off {
-  from {
-    background: #f5edff;
-    color: #9356dc;
-  }
-  to {
-    background: linear-gradient(to top left, #9356dc, #ff79da);
-    color: #ffffff;
-  }
-}
-@keyframes drop-shadow {
-  from {
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  }
-  to {
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  }
-}
-@keyframes drop-shadow-off {
-  from {
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
-  }
-  to {
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  }
-}
-.drop-shadow, .restaurants-bg #restaurants .restaurants-results article:hover, .restaurants-bg #restaurants .restaurants-results article:active,
-.drop-shadow-off,
-.restaurants-bg #restaurants .restaurants-results article {
-  animation-duration: 0.4s;
+.from-down, .menu .menu-wrapper .dish .results-menu > a {
+  animation-name: from-down;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
   animation-fill-mode: both;
-}
-
-.drop-shadow, .restaurants-bg #restaurants .restaurants-results article:hover, .restaurants-bg #restaurants .restaurants-results article:active {
-  animation-name: drop-shadow;
-}
-
-.drop-shadow-off, .restaurants-bg #restaurants .restaurants-results article {
-  animation-name: drop-shadow-off;
 }
 
 header {
@@ -283,13 +170,6 @@ a {
 .logo {
   font-family: "Shrikhand", cursive;
   font-size: 30px;
-}
-
-.from-down, .menu .menu-wrapper .dish .results-menu > a {
-  animation-name: from-down;
-  animation-duration: 0.7s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
 }
 
 .loading-spinner {
@@ -362,7 +242,7 @@ a {
   max-width: 80%;
   text-align: center;
 }
-.search h3 {
+.search p {
   text-align: center;
   margin: 15px 0 35px 0;
   max-width: 90%;
@@ -400,7 +280,6 @@ a {
 }
 .method .method-wrapper a:hover article i, .method .method-wrapper a:focus article i {
   color: #9356dc;
-  transition-duration: 0.4s;
 }
 @media (min-width: 1200px) {
   .method .method-wrapper a {
@@ -484,6 +363,10 @@ a {
   width: 100%;
   max-width: 335px;
   margin: 0 0 20px 0;
+  transition-duration: 0.2s;
+}
+.restaurants-bg #restaurants .restaurants-results article:hover, .restaurants-bg #restaurants .restaurants-results article:active {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 576px) {
   .restaurants-bg #restaurants .restaurants-results article {
@@ -523,7 +406,6 @@ a {
   padding: 15px 40px 0 15px;
 }
 .restaurants-bg #restaurants .restaurants-results article .restaurant-wrapper h4 {
-  font-weight: 900;
   margin-bottom: 2px;
 }
 
@@ -597,13 +479,13 @@ a {
 .menu .menu-wrapper .title i {
   margin: 0 10px 0 0;
 }
-.menu .menu-wrapper .dish h6 {
+.menu .menu-wrapper .dish h2 {
   color: #4b4b4b;
   position: relative;
   margin: 30px 0 30px 0;
   font-size: 16px;
 }
-.menu .menu-wrapper .dish h6:after {
+.menu .menu-wrapper .dish h2:after {
   position: absolute;
   content: "";
   height: 3px;
@@ -634,6 +516,15 @@ a {
   justify-content: space-between;
   overflow: hidden;
   position: relative;
+  transition-duration: 1s;
+  animation-name: from-down;
+  animation-duration: 1s;
+}
+.menu .menu-wrapper .dish .results-menu > a:hover, .menu .menu-wrapper .dish .results-menu > a:focus {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+.menu .menu-wrapper .dish .results-menu > a:hover .check-mark, .menu .menu-wrapper .dish .results-menu > a:focus .check-mark {
+  transform: translateX(-69px);
 }
 .menu .menu-wrapper .dish .results-menu > a:hover .check-mark .circle, .menu .menu-wrapper .dish .results-menu > a:focus .check-mark .circle {
   animation-name: mark-animation;
@@ -650,6 +541,7 @@ a {
   }
 }
 .menu .menu-wrapper .dish .results-menu > a .check-mark {
+  transition-duration: 1s;
   position: absolute;
   width: 69px;
   height: 69px;
@@ -705,21 +597,21 @@ a {
   font-weight: 900;
   color: #4b4b4b;
 }
-.menu .menu-wrapper .dish .results-menu > a h4 {
+.menu .menu-wrapper .dish .results-menu > a h3 {
   font-size: 17px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   max-width: 85%;
 }
-.menu .menu-wrapper .dish .results-menu > a h5 {
+.menu .menu-wrapper .dish .results-menu > a h4 {
   font-size: 14px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   max-width: 83%;
 }
-.menu .menu-wrapper .dish .btn-purple {
+.menu .menu-wrapper .dish .main-btn {
   padding-left: 40px;
   padding-right: 40px;
   margin: 50px auto 0 auto;
@@ -742,13 +634,13 @@ h2 {
 }
 
 h3 {
-  font-weight: 300;
-  font-size: 17px;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 h4 {
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 17px;
 }
 
 h5 {
@@ -761,7 +653,12 @@ h6 {
   font-size: 23px;
 }
 
-.btn-purple {
+.dish h2 {
+  font-weight: 400;
+  font-size: 23px;
+}
+
+.main-btn {
   border-radius: 40px;
   padding: 15px 25px;
   background: linear-gradient(to top left, #9356dc, #ff79da);
@@ -769,14 +666,11 @@ h6 {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   font-size: 16px;
   font-weight: 400;
-  animation-name: btn-off;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
+  transition-duration: 0.4s;
 }
-.btn-purple:hover {
-  animation-name: btn;
-  animation-duration: 0.2s;
-  animation-fill-mode: forwards;
+.main-btn:hover {
+  background: linear-gradient(to top left, #ae80e5, #fface8);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .like-btn {
@@ -784,28 +678,26 @@ h6 {
   height: 24px;
 }
 .like-btn a:active .heart .heart-fill, .like-btn a:hover .heart .heart-fill, .like-btn a:focus .heart .heart-fill {
-  animation-name: heart-bg;
-  animation-duration: 0.4s;
-  animation-fill-mode: forwards;
+  opacity: 100%;
 }
 .like-btn a:active .heart, .like-btn a:hover .heart, .like-btn a:focus .heart {
-  animation-name: heart-stroke-off;
-  animation-duration: 0.4s;
-  animation-fill-mode: forwards;
+  -webkit-text-stroke: 1px transparent;
 }
 .like-btn a .heart {
   background-color: transparent;
   -webkit-text-stroke: 1px black;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  animation-name: heart-stroke-on;
-  animation-duration: 0.4s;
   font-size: 24px;
   position: relative;
   padding-left: 1px;
+  opacity: 100%;
+  transition-duration: 0.4s;
 }
 .like-btn a .heart .heart-fill {
   background: linear-gradient(to bottom left, #9356dc, #ff79da);
+  opacity: 0%;
+  transition-duration: 0.4s;
   font-size: 24px;
   -webkit-text-stroke: 1px transparent;
   -webkit-background-clip: text;
@@ -814,9 +706,6 @@ h6 {
   height: 24px;
   top: 0;
   left: 0;
-  animation-name: heart-bg-off;
-  animation-duration: 0.4s;
-  opacity: 0%;
   padding-left: 1px;
 }
 .like-btn a .heart .heart-fill-menu {
@@ -826,8 +715,6 @@ h6 {
   -webkit-background-clip: text;
   width: 25px;
   height: 24px;
-  animation-name: heart-bg-off;
-  animation-duration: 0.4s;
   opacity: 0%;
   padding-left: 1px;
 }

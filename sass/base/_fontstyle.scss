@@ -9,13 +9,13 @@ h2 {
 }
 
 h3 {
-  font-weight: $light;
-  font-size: 17px;
+  font-weight: $bold;
+  font-size: 18px;
 }
 
 h4 {
-  font-weight: $bold;
-  font-size: 18px;
+  font-weight: $regular;
+  font-size: 17px;
 }
 
 h5 {
@@ -26,4 +26,11 @@ h5 {
 h6 {
   font-weight: $regular;
   font-size: 23px;
+}
+
+.dish {
+  h2 {
+    font-weight: $regular;
+    font-size: 23px;
+  }
 }

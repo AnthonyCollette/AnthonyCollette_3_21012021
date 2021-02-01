@@ -9,6 +9,11 @@ $dark-grey: #353535;
 $white: #ffffff;
 $dark-green: #269e80;
 $light-pink: #f5edff;
+$gradient-purple: linear-gradient(
+  to top left,
+  $primary-color,
+  $secondary-color
+);
 
 // FONTS
 

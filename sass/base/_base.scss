@@ -20,10 +20,3 @@ a {
   font-family: $primary-font;
   font-size: 30px;
 }
-
-.from-down {
-  animation-name: from-down;
-  animation-duration: 0.7s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-}
